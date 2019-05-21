@@ -1,0 +1,15 @@
+sources:
+  nrsrot:
+    args:
+      urlpath: imos-data/IMOS/ANMN/NRS/NRSROT/Temperature/IMOS_ANMN-NRS_TZ_*_C-2019*.nc
+      concat_dim: TIME
+    description: 'Latest temperature files from NRS Rottnest'
+    driver: intake_xarray.netcdf.NetCDFSource
+    metadata:
+      plots:
+        basic:
+          kind: line
+          x: TIME
+          y: TEMP
+          width: 700
+          height: 500
